@@ -1,0 +1,5 @@
+# comment
+
+on property:a=* && !property:b=1
+   setprop x "quoted value"
+   trigger late

@@ -1,0 +1,5 @@
+on boot
+   trigger init
+on init && property:sys.ready=1
+   mount -t tmpfs none /tmp
+   start foo || exec /bin/sh -c "echo hi"

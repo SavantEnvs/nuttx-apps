@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<methodCall>
+<methodName>echo</methodName>
+<params>
+<param><value><i4>2</i4></value></param>
+<param><value><boolean>1</boolean></value></param>
+<param><value><double>1.5</double></value></param>
+<param><value><string>hi</string></value></param>
+</params>
+</methodCall>

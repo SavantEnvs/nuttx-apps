@@ -1,0 +1,9 @@
+project: savantenvs/nuttx-apps
+target: dhcpc
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/dhcpc/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_dhcpc
+    libfuzzer: true
+    timeout: 10

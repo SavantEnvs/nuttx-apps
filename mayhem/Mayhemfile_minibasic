@@ -1,0 +1,9 @@
+project: savantenvs/nuttx-apps
+target: minibasic
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/minibasic/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_minibasic
+    libfuzzer: true
+    timeout: 10

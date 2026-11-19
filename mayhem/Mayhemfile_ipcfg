@@ -1,0 +1,9 @@
+project: savantenvs/nuttx-apps
+target: ipcfg
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/ipcfg/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_ipcfg
+    libfuzzer: true
+    timeout: 10

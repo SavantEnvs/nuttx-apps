@@ -1,0 +1,8 @@
+service foo /bin/foo --system --nofork
+   class core
+   restart_period 100
+   console /dev/ttyS0
+   oneshot
+service foo /bin/bar -- a b c
+   override
+   gentle_kill

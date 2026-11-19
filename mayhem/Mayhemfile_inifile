@@ -1,0 +1,9 @@
+project: savantenvs/nuttx-apps
+target: inifile
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/inifile/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_inifile
+    libfuzzer: true
+    timeout: 10
