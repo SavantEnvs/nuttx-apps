@@ -1,0 +1,9 @@
+project: savantenvs/nuttx-apps
+target: ymodem
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/ymodem/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_ymodem
+    libfuzzer: true
+    timeout: 10

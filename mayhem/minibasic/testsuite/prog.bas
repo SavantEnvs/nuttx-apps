@@ -1,0 +1,10 @@
+10 REM test
+20 DIM A(10)
+30 FOR I = 1 TO 10
+40 LET A(I) = I * I
+50 NEXT I
+60 PRINT A(3), MID$("hello", 2, 3)
+70 IF A(2) = 4 THEN GOSUB 100
+80 END
+100 PRINT "sub"
+110 RETURN

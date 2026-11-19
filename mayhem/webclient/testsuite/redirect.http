@@ -1,0 +1,8 @@
+HTTP/1.1 301 Moved
+Location: https://example.org:8443/next?a=b
+Content-Length: 0
+
+HTTP/1.0 404 Not Found
+Connection: close
+
+gone

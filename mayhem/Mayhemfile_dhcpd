@@ -1,0 +1,9 @@
+project: savantenvs/nuttx-apps
+target: dhcpd
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/dhcpd/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_dhcpd
+    libfuzzer: true
+    timeout: 10

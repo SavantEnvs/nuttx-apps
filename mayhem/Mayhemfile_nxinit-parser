@@ -1,0 +1,9 @@
+project: savantenvs/nuttx-apps
+target: nxinit-parser
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/nxinit-parser/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_nxinit_parser
+    libfuzzer: true
+    timeout: 10

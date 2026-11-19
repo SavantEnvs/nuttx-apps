@@ -1,0 +1,8 @@
+project: savantenvs/nuttx-apps
+target: zmodem
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/zmodem/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/zmodem_rz @@
+    timeout: 10

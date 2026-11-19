@@ -1,0 +1,22 @@
+10 OPEN "data.txt" FOR OUTPUT AS #1
+20 FOR I = 1 TO 3: PRINT #1, I; ","; "row"; I: NEXT
+30 CLOSE #1
+40 OPEN "data.txt" FOR INPUT AS #1
+50 WHILE NOT EOF(1)
+60   LINE INPUT #1, L$
+70   PRINT L$
+80 WEND
+90 CLOSE #1
+100 OPEN "R", #2, "rand.dat", 16
+110 FIELD #2, 8 AS N$, 8 AS V$
+120 LSET N$ = "key": RSET V$ = "42"
+130 PUT #2, 1
+140 GET #2, 1
+150 PRINT N$; V$
+160 CLOSE
+170 NAME "data.txt" AS "moved.txt"
+180 KILL "moved.txt"
+190 ON ERROR GOTO 300
+200 OPEN "missing.txt" FOR INPUT AS #3
+210 END
+300 PRINT "error"; ERR: RESUME 210
